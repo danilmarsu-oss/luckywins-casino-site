@@ -1,15 +1,3 @@
-const faqButtons = document.querySelectorAll(".faq-question");
-
-faqButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const expanded = button.getAttribute("aria-expanded") === "true";
-    const answer = button.nextElementSibling;
-
-    button.setAttribute("aria-expanded", String(!expanded));
-    answer.style.maxHeight = expanded ? "0px" : `${answer.scrollHeight}px`;
-  });
-});
-
 const updatedDateElement = document.getElementById("updated-date");
 if (updatedDateElement) {
   const today = new Date();
